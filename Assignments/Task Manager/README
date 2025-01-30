@@ -1,0 +1,14 @@
+This task entails in making a Task Manager application that allows users to manage their daily tasks using a linked list.
+Program will be able:
+    1. Add tasks
+        a. At the beginning (highest priority)
+        b. At the end (lowest priority)
+        c. At a specific position (custom priority)
+    2. Delete tasks
+        a. The first task (highest priority task)
+        b. The last task (lowest priority task)
+        c. A task at a specific position
+    3. View tasks
+        a. Display all tasks in order of their priority
+    4. Search for a task
+        a. Search for a task by its description and display its priority
