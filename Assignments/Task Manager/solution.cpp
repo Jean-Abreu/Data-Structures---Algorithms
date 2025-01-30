@@ -147,7 +147,21 @@ public:
         delete taskToDelete;
     }
 
-    //Function to print the nodes of the linked list
+    //Function to search for a task based off of description
+    void search(std::string task){
+        if(!head){
+            std::cout << "List is empty." << std::endl;
+            return;
+        }
+        Task* temp = head;
+        while(temp){
+            if(temp->task_description == task){
+                std::cout << temp->priority;
+            }
+        }
+    }
+
+    //Function to print the task of the linked list
     void display(){
         if(!head){
             std::cout << "List is empty." << std::endl;
@@ -166,6 +180,7 @@ public:
 int main(){
     //Initialize a new linked list
     LinkedList list1;
+    std::string task;
 
     //Insert elements at the end
     list1.insertAtEnd("Do laundrey", 1);
@@ -174,7 +189,14 @@ int main(){
     std::cout << "Linked list after insertions: ";
     list1.display();
 
+    std::cout << "Task: ";
+    std::cin >> task;
+    list1.search(task);
 
+    //Need to make a switch case acting as the menu for user
+
+    //List of functions within linked list:
+    //insertAtBeginning(string, int), insertAtEnd(string, int), insertAtPosition(string, int, position), deleteFromBeginning(), deleteFromEnd(), deleteFromPosition(int position), display()
 
     return 0;
 }
