@@ -156,8 +156,11 @@ public:
         Task* temp = head;
         while(temp){
             if(temp->task_description == task){
-                std::cout << temp->priority;
-            }
+                std::cout <<"Task found with priority: " << temp->priority << std::endl;
+                break;
+            } else{
+                temp = temp->next;
+            }  
         }
     }
 
@@ -190,13 +193,14 @@ int main(){
     list1.display();
 
     std::cout << "Task: ";
-    std::cin >> task;
+    std::getline(std::cin, task);
     list1.search(task);
 
     //Need to make a switch case acting as the menu for user
 
     //List of functions within linked list:
-    //insertAtBeginning(string, int), insertAtEnd(string, int), insertAtPosition(string, int, position), deleteFromBeginning(), deleteFromEnd(), deleteFromPosition(int position), display()
+    //insertAtBeginning(string, int), insertAtEnd(string, int), insertAtPosition(string, int, position)
+    //deleteFromBeginning(), deleteFromEnd(), deleteFromPosition(int position), display(), search(string)
 
     return 0;
 }
