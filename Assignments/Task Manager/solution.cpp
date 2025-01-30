@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 
 //Creating a node
 struct Task{
@@ -184,17 +185,91 @@ int main(){
     //Initialize a new linked list
     LinkedList list1;
     std::string task;
+    int op, op_1;
 
-    //Insert elements at the end
-    list1.insertAtEnd("Do laundrey", 1);
-    list1.insertAtEnd("Get milk", 2);
 
-    std::cout << "Linked list after insertions: ";
-    list1.display();
+    //Taking user input to determine opertation
+    std::cout << "What would you like to do? (1, 2, or 3)" << std::endl;
+    std::cout << "1. Add task " << std::endl;
+    std::cout << "2. Delete task" << std::endl;
+    std::cout << "3. List tasks" << std::endl;
+    std::cout << "Enter choice: ";
+    std::cin >> op;
 
-    std::cout << "Task: ";
-    std::getline(std::cin, task);
-    list1.search(task);
+    std::cout << "====================================" << std::endl;
+
+    //Options after user selects initial option
+    if(op == 1){
+        std::cout << "How would you like to add the task? (1, 2, or 3)" << std::endl;
+        std::cout << "1. At the beginning." << std::endl;
+        std::cout << "2. At the end." << std::endl;
+        std::cout << "3. At a certain position." << std::endl;
+        std::cout << "Enter choice: ";
+        std::cin >> op_1;
+        std::cout << "====================================" << std::endl;
+    }
+    else if(op == 2){
+        std::cout << "How would you like to delete the task? (1, 2, or 3)" << std::endl;
+        std::cout << "1. At the beginning." << std::endl;
+        std::cout << "2. At the end." << std::endl;
+        std::cout << "3. At a certain position." << std::endl;
+        std::cout << "Enter choice: ";
+        std::cin >> op_1;
+        std::cout << "====================================" << std::endl;
+    }
+
+    int value, position;
+    // ** Fix the newline issue before using getline() **
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    switch(op){
+        case 1: //Adding tasks
+            switch(op_1){
+                case 1: //Beginning
+                    std::cout << "What is the task?" << std::endl;
+                    getline(std::cin, task);
+
+                    std::cout << "What is the level of priority?" << std::endl;
+                    std::cin >> value;
+
+                    list1.insertAtBeginning(task, value);
+                    break;
+                case 2: //End
+                    std::cout << "What is the task?" << std::endl;
+                    getline(std::cin, task);
+
+                    std::cout << "What is the level of priority?" << std::endl;
+                    std::cin >> value;
+
+                    list1.insertAtEnd(task, value);
+                    break;
+                case 3: //Position
+                    std::cout << "What is the task?" << std::endl;
+                    getline(std::cin, task);
+
+                    std::cout << "What is the level of priority?" << std::endl;
+                    std::cin >> value;
+
+                    std::cout << "At what position would you like to insert task?";
+                    std::cin >> position;
+
+                    list1.insertAtPosition(task, value, position);
+                    break;
+            }
+            break;
+        case 2: //Deleting tasks
+        switch(op_1){
+                case 1: //Beginning
+                case 2: //End
+                case 3: //Position
+                break;
+            }
+            break;
+        case 3: //Viewing list
+            break;
+        default:
+            std::cout << "Enter a valid option. " << std::endl;
+    }
 
     //Need to make a switch case acting as the menu for user
 
