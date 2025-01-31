@@ -267,19 +267,32 @@ int main(){
             case 2: //Deleting tasks
             switch(op_1){
                     case 1: //Beginning
+                        list1.deleteFromBeginning();
+                        std::cout << "Deleted from the beginning." << std::endl;
+                        break;
                     case 2: //End
+                        list1.deleteFromEnd();
+                        std::cout << "Deleted from the end. " << std::endl;
+                        break;
                     case 3: //Position
-                    break;
+                        std::cout << "Which position would you like to delete?";
+                        std::cin >> position;
+                        list1.deleteFromPosition(position);
+                        std::cout << "Deleted from the " << position << " position." << std::endl;
+                        break;
                 }
                 break;
             case 3: //Viewing list
+                list1.display();
                 break;
             default:
                 std::cout << "Enter a valid option. " << std::endl;
         }
 
     }
-    //Need to make a switch case acting as the menu for user
+    //Need to implement searching for tasks in the switch case.
+    //Need to change the layout for display tasks.
+    //Also, need to figure out why "Enter a valid option" appears when exiting the program
 
     //List of functions within linked list:
     //insertAtBeginning(string, int), insertAtEnd(string, int), insertAtPosition(string, int, position)
