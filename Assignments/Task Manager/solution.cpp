@@ -172,11 +172,13 @@ public:
             return;
         }
         Task* temp = head;
+        std::cout << "List of tasks: " << std::endl;
         while(temp){
-            std::cout << temp->task_description << " -> ";
+            std::cout << "Task description: "<< temp->task_description << " || Priority: " << temp->priority << std::endl;
             temp = temp->next;
         }
-        std::cout << "NULL" << std::endl;
+        std::cout << "====================================" << std::endl;
+        
     }
 };
 
@@ -194,15 +196,17 @@ int main(){
         std::cout << "1. Add task " << std::endl;
         std::cout << "2. Delete task" << std::endl;
         std::cout << "3. List tasks" << std::endl;
-        std::cout << "4. Quit.." << std::endl;
+        std::cout << "4. Search for a task" << std::endl;
+        std::cout << "5. Quit.." << std::endl;
         std::cout << "Enter choice: ";
         std::cin >> op;
 
         std::cout << "====================================" << std::endl;
 
-        if(op == 4){
+        if(op == 5){
             std::cout << "Exiting program.." << std::endl;
             running = false;
+            continue;
         }
 
         //Options after user selects initial option
@@ -240,6 +244,7 @@ int main(){
                         std::cin >> value;
 
                         list1.insertAtBeginning(task, value);
+                        std::cout << "====================================" << std::endl;
                         break;
                     case 2: //End
                         std::cout << "What is the task?" << std::endl;
@@ -249,6 +254,7 @@ int main(){
                         std::cin >> value;
 
                         list1.insertAtEnd(task, value);
+                        std::cout << "====================================" << std::endl;
                         break;
                     case 3: //Position
                         std::cout << "What is the task?" << std::endl;
@@ -261,6 +267,7 @@ int main(){
                         std::cin >> position;
 
                         list1.insertAtPosition(task, value, position);
+                        std::cout << "====================================" << std::endl;
                         break;
                 }
                 break;
@@ -269,24 +276,34 @@ int main(){
                     case 1: //Beginning
                         list1.deleteFromBeginning();
                         std::cout << "Deleted from the beginning." << std::endl;
+                        std::cout << "====================================" << std::endl;
                         break;
                     case 2: //End
                         list1.deleteFromEnd();
                         std::cout << "Deleted from the end. " << std::endl;
+                        std::cout << "====================================" << std::endl;
                         break;
                     case 3: //Position
                         std::cout << "Which position would you like to delete?";
                         std::cin >> position;
                         list1.deleteFromPosition(position);
                         std::cout << "Deleted from the " << position << " position." << std::endl;
+                        std::cout << "====================================" << std::endl;
                         break;
                 }
                 break;
             case 3: //Viewing list
                 list1.display();
                 break;
+            case 4: //Searching for a task
+                std::cout << "Which task would you like to search for? " << std::endl;
+                getline(std::cin, task);
+                list1.search(task);
+                std::cout << "====================================" << std::endl;
+                break;
             default:
                 std::cout << "Enter a valid option. " << std::endl;
+                std::cout << "====================================" << std::endl;
         }
 
     }
