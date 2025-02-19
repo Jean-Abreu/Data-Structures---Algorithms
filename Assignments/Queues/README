@@ -1,0 +1,62 @@
+The following coding solutions are derived from COP 3530 Data Structures & Algorithms.
+This weeks topic is Queues. 
+
+Question 1: Implement a Queue Using an Array
+Write a C++ program to implement a queue using an array. Your program should include
+the following functions:
+1. enqueue(int value): Insert an element at the rear.
+2. dequeue(): Remove an element from the front.
+3. peek(): Display the front element without removing it.
+4. isFull(): Check if the queue is full.
+5. isEmpty(): Check if the queue is empty.
+6. display(): Print all elements of the queue.
+Requirements:
+• Define the maximum queue size as MAX = 5.
+• Handle queue overflow and underflow conditions.
+• Test the program with at least 5 enqueue operations, followed by 2 dequeue
+operations, and print the remaining elements.
+
+
+Question 2: Implement a Queue Using a Linked List
+Write a C++ program to implement a queue using a linked list. Your program should
+include the following functions:
+1. enqueue(int value): Insert an element at the rear.
+2. dequeue(): Remove an element from the front.
+3. peek(): Display the front element without removing it.
+4. isEmpty(): Check if the queue is empty.
+5. display(): Print all elements of the queue.
+Requirements:
+• Use a dynamically allocated linked list.
+• Handle queue underflow when trying to dequeue from an empty queue.
+• Test the program with at least 5 enqueue operations, followed by 3 dequeue
+operations, and print the remaining elements.
+
+
+Question 3: Circular Queue Implementation
+Modify your array-based queue from Question 1 to implement a circular queue. Ensure
+that:
+1. Enqueue and dequeue operations work efficiently using modulus (%) operator.
+2. The queue can wrap around and reuse empty slots.
+3. Handle queue full and queue empty conditions properly.
+Test Case:
+• Enqueue 5 elements.
+• Dequeue 2 elements.
+• Enqueue 2 more elements and display the final queue.
+
+
+Question 4: (Any one of the 5 real time applications for each group as assigned in
+class) Screen recording with voice over is required for this question
+Queue real time Application questions:
+Problem 1: Print Job Scheduling (Jean, Edward, Rechy, Langley)
+Problem Statement:
+A printer processes print jobs in FIFO order. Implement a queue-based print
+scheduler where:
+• Users can add a print job (enqueue).
+• The printer processes jobs in order (dequeue).
+• The system should display the current queue of print jobs.
+Output:
+Added to Print Queue: Report.pdf
+Added to Print Queue: Presentation.pptx
+Current Print Queue: Report.pdf | Presentation.pptx |
+Printing: Report.pdf
+Current Print Queue: Presentation.pptx |
