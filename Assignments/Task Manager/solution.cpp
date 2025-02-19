@@ -263,7 +263,7 @@ int main(){
                         std::cout << "What is the level of priority?" << std::endl;
                         std::cin >> value;
 
-                        std::cout << "At what position would you like to insert task?";
+                        std::cout << "At what position would you like to insert task?" << std::endl;
                         std::cin >> position;
 
                         list1.insertAtPosition(task, value, position);
@@ -284,7 +284,7 @@ int main(){
                         std::cout << "====================================" << std::endl;
                         break;
                     case 3: //Position
-                        std::cout << "Which position would you like to delete?";
+                        std::cout << "Which position would you like to delete?" << std::endl;
                         std::cin >> position;
                         list1.deleteFromPosition(position);
                         std::cout << "Deleted from the " << position << " position." << std::endl;
