@@ -34,7 +34,7 @@ class queue{
 
     public:
         //Constructor to initialize the front and rear
-        Queue() { front = rear = nullptr; }
+        queue() { front = rear = nullptr; }
 
         //Function to see if the queue is empty
         bool isEmpty(){
@@ -81,7 +81,7 @@ class queue{
                 rear = nullptr;
             
             //Deallocate memory of the old front node
-            //delete temp;
+            delete temp;
         }
         //Function to get the front element of the queue
         int peek(){
@@ -100,8 +100,10 @@ class queue{
                 return;
             }
             node* temp = front;
-            while(temp->next != nullptr){
-                std::cout << temp->data;
+            std::cout << "Queue: ";
+            while(temp != nullptr){ //Traversing until the end
+                std::cout << temp->data << " ";
+                temp = temp->next; //Moving to the next node
             }
         }
 
