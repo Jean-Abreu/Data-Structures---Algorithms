@@ -121,12 +121,15 @@ int main(){
     q.enqueue(30);
     
     q.enqueue(40);
-    
-    q.dequeue();
-    
-    q.dequeue();
-    
+
     q.enqueue(50);
+    
+    std::cout << "Removed: " << q.dequeue() << std::endl;
+    
+    std::cout << "Removed: " << q.dequeue() << std::endl;
+    
+    q.display();
+    
 
     return 0;
 }
