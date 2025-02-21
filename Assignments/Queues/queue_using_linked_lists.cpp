@@ -105,6 +105,7 @@ class queue{
                 std::cout << temp->data << " ";
                 temp = temp->next; //Moving to the next node
             }
+            std::cout << std::endl;
         }
 
 };
@@ -116,8 +117,14 @@ int main()
      // Enqueue elements into the queue
      q.enqueue(10);
      q.enqueue(20);
+     q.enqueue(30);
+     q.enqueue(40);
+     q.enqueue(50);
+
+     //Displaying entire queue
+     q.display();
  
-     // Display the front and rear elements of the queue
+     // Display the front elements of the queue
      std::cout << "Queue Front: " << q.peek() << std::endl;
  
      // Dequeue elements from the queue
@@ -127,13 +134,14 @@ int main()
      // Enqueue more elements into the queue
      q.enqueue(30);
      q.enqueue(40);
-     q.enqueue(50);
  
      // Dequeue an element from the queue
      q.dequeue();
  
-     // Display the front and rear elements of the queue
+     // Display the front elements of the queue
      std::cout << "Queue Front: " << q.peek() << std::endl;
+
+
      
     
 
