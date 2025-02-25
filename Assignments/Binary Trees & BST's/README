@@ -1,0 +1,26 @@
+//This list of problems involve practicing with Binary and Binary Search Trees
+//There are three questions for this section
+
+/* Question 1: (20 points)
+Write a C++ program that implements a Binary Search Tree (BST) with functionalities to
+insert, search, and delete elements. The program initializes a BST with 11 elements and
+provides user-interactive options to perform operations on the tree.
+Features of the program:
+1. Insertion: Adds elements into the BST.
+2. Search: Checks if an element is present in the BST.
+3. Deletion: Removes a specific element while maintaining BST properties.
+4. Inorder Traversal: Displays the tree elements in sorted order. 
+
+Question 2: (20 points)
+How can you determine if a given tree is a Binary Tree or a Binary Search Tree (BST)?
+Provide a C++ program to check whether the tree follows the BST properties, where for
+each node:
+• The left subtree contains only values less than the node's value.
+• The right subtree contains only values greater than the node's value.
+• The above conditions apply recursively to all subtrees.
+The program should efficiently verify if the given tree is a valid BST and return an
+appropriate result. 
+
+Question 3: (Each group solves one as specified) (10 points)
+Problem on Binary Search Tree Questions (BST): (Short answers)
+1. Convert BST to a Sorted Doubly Linked List (Jean, Edward, Rechy, Langley)  */
