@@ -69,7 +69,7 @@ bool bst_or_bt(Node* root){
         return false;
     }
 
-    bst_or_bt(root->left) && bst_or_bt(root->right);;
+    return bst_or_bt(root->left) && bst_or_bt(root->right);
     
 
 }
@@ -80,11 +80,8 @@ int main(){
 
     root = insertNode(root, 50);
     root = insertNode(root, 30);
-    root = insertNode(root, 20);
-    root = insertNode(root, 40);
     root = insertNode(root, 70);
-    root = insertNode(root, 60);
-    root = insertNode(root, 80);
+    
 
     std::cout << "Binary Tree: ";
     displayBT(root);
