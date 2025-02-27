@@ -52,6 +52,16 @@ Node* newNode(int data){
     return (new_node);
 }
 
+//Function to print nodes in a given doubly linked list
+void printList(Node* Node)
+{
+    while (Node != NULL)
+    {
+        std::cout << Node->data << " ";
+        Node = Node->right;
+    }
+}
+
 int main(){
 
 
