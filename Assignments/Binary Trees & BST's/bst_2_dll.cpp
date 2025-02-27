@@ -44,6 +44,14 @@ void bst_2_dll(Node* root, Node** head)
     bst_2_dll(root->right, head);
 }
 
+//Allocates a new node with given data 
+Node* newNode(int data){
+    Node* new_node = new Node;
+    new_node->data = data;
+    new_node->left = new_node->right = NULL;
+    return (new_node);
+}
+
 int main(){
 
 
