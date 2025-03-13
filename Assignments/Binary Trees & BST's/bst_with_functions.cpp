@@ -147,6 +147,10 @@ int main(){
     root = insertNode(root, 70);
     root = insertNode(root, 60);
     root = insertNode(root, 80);
+    root = insertNode(root, 25);
+    root = insertNode(root, 45);
+    root = insertNode(root, 65);
+    root = insertNode(root, 75);
 
     //Print the inorder traversal of a BST
     std::cout << "Inorder traversal of the given Binary Search Tree is: ";

@@ -63,7 +63,19 @@ void printList(Node* Node)
 }
 
 int main(){
+    //Creating the tree
+    Node* root = newNode(10);
+    root->left = newNode(12);
+    root->right = newNode(15);
+    root->left->left = newNode(25);
+    root->right->left = newNode(30);
 
+    //Converting tree to DLL
+    Node* head = NULL;
+    bst_2_dll(root, &head);
+    
+    //Printing the converted list
+    printList(head);
 
 
     return 0;
