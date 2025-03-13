@@ -30,17 +30,39 @@ class AVLTree {
 
         //Function to get balance factor
         int getBalance(Node* node){
-
+            
         }
 
         //Right rotate
         Node* rightRotate(Node* y){
+            Node* x = y->right;
+            Node* T2 = x->left;
 
+            //Performing the rotation
+            x->right = y;
+            y->left = T2;
+
+            //Updating the heights
+            y->height = max(getHeight(y->left), getHeight(y->right)) + 1;
+            x->height = max(getHeight(x->left), getHeight(x->right)) + 1;
+
+            return x;
         }
 
         //Left rotate
         Node* leftRotate(Node* x){
+            Node* y = x->right;
+            Node* T2 = y->left;
 
+            //Performing the rotation
+            x->left = x;
+            x->right = T2;
+
+            //Updating the heights
+            x->height = max(getHeight(x->left), getHeight(x->right)) + 1;
+            y->height = max(getHeight(y->left), getHeight(y->right)) + 1;
+
+            return y;
         }
 
         //Inserting node and balancing the tree
@@ -125,6 +147,7 @@ class AVLTree {
         }
 
         void remove(int key){
+            root = remove(root, key);
 
         }
 
