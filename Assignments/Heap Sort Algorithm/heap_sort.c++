@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 //Function to maintain the Min-Heap property
 template <typename T>
@@ -19,7 +20,7 @@ void heapify(T arr[], int n, int i) {
 
     //If the smallest is not the root, swap and continue heapifying
     if(smallest != i) {
-        swap(arr[i], arr[smallest]);
+        std::swap(arr[i], arr[smallest]);
         heapify(arr, n, smallest); //Recursively heapify the affected subtree
     }
 }
@@ -41,7 +42,7 @@ void heapSort(T arr[], int n) {
     //Step 2: Extract elements one by one
     for(int i = n -1; i > 0; i--){
         //Move the smallest element (root) to the end
-        swap(arr[0], arr[i]);
+        std::swap(arr[0], arr[i]);
         //Restore the Min-Heap property on the reduced heap
         heapify(arr, i, 0);
     }
