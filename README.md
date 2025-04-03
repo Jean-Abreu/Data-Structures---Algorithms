@@ -1,3 +1,4 @@
+
 This repository contains a variety of exercises done while taking DSA.
 The goal for this repo is to be able to showcase the different skills learned during my time in this course.
 
