@@ -53,3 +53,32 @@ class HashTable {
             return 0;
         }
 };
+
+char firstNonRepeatChar(const std::string& s){
+    //Creating an instance of HashTable
+    HashTable ht;
+    //First pass, we insert the keys into the table
+    for(char c:s)
+        ht.insert(c);
+    //Second pass, we look at the frequency of the characters
+    for(char c:s){
+        if(ht.getFrequency(c) == 1)
+            return c;
+    }
+    //If there is no key with frequency one, we return null
+    return '\0';
+}
+
+int main() {
+    //Creating the string for input
+    std::string input = "swiss";
+    //Calling the firstNonRepeatChar function and assigning it to a variable
+    char result = firstNonRepeatChar(input);
+    //Printing out the output
+    if(result != '\0')
+        std::cout << "First non-repeating character: " << result;
+    else
+        std::cout << "No non-repeating characters found." << std::endl;
+
+    return 0;
+}
