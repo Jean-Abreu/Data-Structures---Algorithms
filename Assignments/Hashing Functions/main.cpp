@@ -40,4 +40,16 @@ class HashTable {
                 table[index].value++;
             }
         }
+        //Frequency function
+        int getFrequency(char key){
+            int index = hash(key); //Using the hash function to assign an index
+            int originalIndex = index; //Saving the index to prevent infinite looping
+            while(table[index].isOccupied){
+                if(table[index].key == key)
+                    return table[index].value;
+                index = (index + 1) % SIZE;
+                if(index == originalIndex)break;
+            }
+            return 0;
+        }
 };
