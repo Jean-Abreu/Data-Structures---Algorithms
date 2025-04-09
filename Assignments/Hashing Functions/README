@@ -1,0 +1,7 @@
+This assignment was given to our class after a lecture in Hashing and Hash functions. 
+I will be incorporating my own rendition of a Hash Map for this assignment.
+The Hash Function I have decided to use for this is Linear Probing.
+This method is rather simple and involves moving to the next index if there is a collision.
+
+Problem: Develop a function that detects first non-repeating character in a string.
+Use a hash-map with a hash function to incorporate this functionality.
