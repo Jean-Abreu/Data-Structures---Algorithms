@@ -1,7 +1,14 @@
+## Data Structures & Algorithms Repository
 
-This repository contains a variety of exercises done while taking DSA.
-The goal for this repo is to be able to showcase the different skills learned during my time in this course.
+This repository showcases a collection of exercises and implementations completed during my Data Structures and Algorithms (DSA) course. It reflects the progression of concepts learned throughout the semester, ranging from fundamental data structures to more advanced algorithmic problem-solving.
 
+The repository will continue to be updated as the course progresses, highlighting key skills such as:
 
-This file will be updated as I move through the course and overall the repo should grow incredibly diverse.
-Thank you for your time. 
+- Efficient algorithm design
+- Problem-solving techniques
+- Code modularity and readability
+- Understanding of time and space complexity
+
+This project serves as both a learning journal and a portfolio of practical DSA experience.
+
+Thank you for visiting!
